@@ -1,3 +1,4 @@
+//this function checks the results of of the user selected throw vs. the robot's random throw...  it will then return a value of win loose or tie
 export default function checkResult(userThrow, robotThrow) {
     if (userThrow === robotThrow) return 'tie';
     if (userThrow === 'rock' && robotThrow === 'paper') return 'loss';
