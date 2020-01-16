@@ -4,6 +4,8 @@ const test = QUnit.test;
 
 QUnit.module('throw results');
 
+//these are tests that will check my CheckResult function 
+
 test('are throws equal / tie', assert => {
     //setup the user guess
     const userThrow = 'rock' ;
