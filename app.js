@@ -1,9 +1,7 @@
-const shootButton = document.getElementById('shootButton');
-const userChoice = document.getElementById('choice').value;
+// const shootButton = document.getElementById('shootButton');
+// const userChoice = document.getElementById('userChoice').value;
 
-
-shootButton.addEventListener('click', () => {
-    console.log(userChoice);
-});
-
+// // shootButton.addEventListener('click', () => {
+// //     console.log(userChoice);
+// // });
 
