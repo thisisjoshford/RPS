@@ -3,6 +3,7 @@ import getRandomThrow from './get-random-throw.js';
 import checkResult from './checkResult.js';
 const shootButton = document.getElementById('shootButton');
 const gameResult = document.getElementById('gameResult');
+const robotChoice = document.getElementById('robotChoice');
 
 shootButton.addEventListener('click', () => {
     const userChoice = document.querySelector('input:checked');
@@ -16,6 +17,8 @@ shootButton.addEventListener('click', () => {
     if (robotThrowNumber === 1) { robotThrow = 'paper'; }
     if (robotThrowNumber === 2) { robotThrow = 'scissors'; }
 
+    robotChoice.textContent = robotThrow;
+
     let result = '';
 
     result = checkResult(userThrow, robotThrow);
@@ -27,7 +30,7 @@ shootButton.addEventListener('click', () => {
     if (result === 'tie')
         gameResult.textContent = 'its a Tie!';
 
-    
+
     console.log(result);
     console.log(userChoice);
     console.log(userThrow);
