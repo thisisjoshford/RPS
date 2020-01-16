@@ -1,4 +1,6 @@
 import getRandomThrow from './get-random-throw.js';
+import checkResult from './checkResult.js';
+
 const shootButton = document.getElementById('shootButton');
 
 shootButton.addEventListener('click', () => {
@@ -18,7 +20,11 @@ shootButton.addEventListener('click', () => {
     if (robotThrowNumber === 2) {
         robotThrow = 'scissors';
     }
-    
+
+    let gameResult = '';
+    gameResult = checkResult(userThrow, robotThrow);
+
+    console.log(gameResult);
     console.log(userChoice);
     console.log(userThrow);
     console.log(robotThrowNumber);
