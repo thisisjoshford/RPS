@@ -12,7 +12,9 @@
 <body>
     <img src="https://d2xwpga9enqvqn.cloudfront.net/product_graphics/281/large/Roshambo.png?1557670783">
     <h1>Welcome to ROSHAMBO! </h1>
-    <h2>aka Rock... paper.... scissors...</h2>
+    <h2>aka Rock... paper.... scissors...
+        
+    </h2>
     <h3>Instructions...</h3>
     <p>choose rock, paper or scissors and then click on "SHOOT!"</p> 
     <h3>RULES</h3>
@@ -30,7 +32,9 @@
     <label>
         <input type="radio" name="choice" value="scissors"><img class="radio-image" src="./assets/scissors.jpg">
     </label><br>
-    <button id="shootButton">SHOOT!</button>
+    
+    <button id="shootButton" value="PLAY">SHOOT!</button>
+    <audio id="audio" src="./assets/glitch-in-the-matrix.ogg" ></audio>
     <div id='results'><br>
         <span id="robotChoiceDisplay" class="hidden"> The robot chose: </span><span id="robotChoice"></span>
         <p id="gameResult"></p>
@@ -41,6 +45,13 @@
         Number of Losses:<span id="numberOfLosses"> </span><br>
         Number of Draws:<span id="numberOfTies"> </span><br>
     </div>
+
+<!-- <script>
+    function play(){
+         var audio = document.getElementById("audio");
+         audio.play();
+                   }
+</script> -->
 </body >
 <script type="module" src="app.js"></script>
 <script type="module" src="get-random-throw.js"></script>

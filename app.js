@@ -9,6 +9,7 @@ const robotChoiceDisplay = document.getElementById('robotChoiceDisplay');
 const number_of_throws = document.getElementById('numberOfThrows');
 const number_of_wins = document.getElementById('numberOfWins');
 const number_of_losses = document.getElementById('numberOfLosses');
+const audio = document.getElementById('audio');
 const number_of_ties = document.getElementById('numberOfTies');
 //sets empty containers for number of throws, wins, and losses globaly, not in button function so button doesn't reset 
 let numberOfThrows = 0;
@@ -17,6 +18,9 @@ let numberOfLosses = 0;
 let numberOfTies = 0;
 //shoot button working on click... gets the user input and computers random input then compares and returns a result back to the DOM
 shootButton.addEventListener('click', () => {
+   
+    audio.play();
+    
     //increment number of throws plus 1
     numberOfThrows++;
     //gets the input from the radio button on the DOM and sets value to the userThrow
