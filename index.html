@@ -8,40 +8,34 @@
     <link rel="stylesheet" href="style.css">
     <title>=Rock, Paper, Scissors Game!</title>
 </head>
-<img src="https://d2xwpga9enqvqn.cloudfront.net/product_graphics/281/large/Roshambo.png?1557670783">
-<p>Welcome to ROSHAMBO! aka Rock... paper.... scissors...</p>
-<h3>Instructions...</h3>
-<p>choose rock, paper or scissors and then click on "SHOOT!"</p> 
-<h3>RULES</h3>
-<ul>
-    <li>Rock beats Scissors</li>
-    <li>Paper covers Rock</li>
-    <li>Scissors Cuts paper</li>
-</ul>
-
-<label>
-    <input type="radio" name="choice" value="rock" checked>Rock
-</label>
-
-<label>
-    <input type="radio" name="choice" value="paper">Paper
-</label>
-
-<label>
-    <input type="radio" name="choice" value="scissors">Scissors
-</label>
-
-<button id="shootButton">SHOOT!</button>
-<div id='results'> <br>
-    <span id="robotChoiceDisplay" class="hidden"> The robot chose: </span><span id="robotChoice"></span>
-    <p id="gameResult"></p>
-
-</div>
 
 <body>
-
-    <script type="module" src="app.js"></script>
-    <script type="module" src="get-random-throw.js"></script>
-</body>
+    <img src="https://d2xwpga9enqvqn.cloudfront.net/product_graphics/281/large/Roshambo.png?1557670783">
+    <p>Welcome to ROSHAMBO! aka Rock... paper.... scissors...</p>
+    <h3>Instructions...</h3>
+    <p>choose rock, paper or scissors and then click on "SHOOT!"</p> 
+    <h3>RULES</h3>
+    <ul>
+        <li>Rock beats Scissors</li>
+        <li>Paper covers Rock</li>
+        <li>Scissors Cuts paper</li>
+    </ul>
+    <label>
+        <input type="radio" name="choice" value="rock" checked><img class="radio-image" src="https://i.imgur.com/k9CTjfQ.jpg">
+    </label>
+    <label>
+        <input type="radio" name="choice" value="paper"><img class="radio-image" src="https://i.imgur.com/irUyfJ1.jpg">
+    </label>
+    <label>
+        <input type="radio" name="choice" value="scissors"><img class="radio-image" src="https://i.imgur.com/NGTBPSS.jpg"
+    </label>
+    <button id="shootButton">SHOOT!</button>
+    <div id='results'><br>
+        <span id="robotChoiceDisplay" class="hidden"> The robot chose: </span><span id="robotChoice"></span>
+        <p id="gameResult"></p>
+    </div>
+</body >
+<script type="module" src="app.js"></script>
+<script type="module" src="get-random-throw.js"></script>
 
 </html>

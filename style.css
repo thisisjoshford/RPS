@@ -1,3 +1,14 @@
 .hidden {
     display: none;
   }
+  
+.radio-image {
+  border: 10px solid transparent;
+  border-radius: 60%;
+  width: 150px;
+}
+
+input:checked + .radio-image {
+    border: 20px solid rgb(0, 72, 131);
+}
+

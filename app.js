@@ -1,11 +1,11 @@
 //imports getRandomThrow and checkResult function
 import getRandomThrow from './get-random-throw.js';
 import checkResult from './checkResult.js';
+//getting some quality DOM right here...
 const shootButton = document.getElementById('shootButton');
 const gameResult = document.getElementById('gameResult');
 const robotChoice = document.getElementById('robotChoice');
 const robotChoiceDisplay = document.getElementById('robotChoiceDisplay');
-
 //shoot button working on click... gets the user input and computers random input then compares and returns a result back to the DOM
 shootButton.addEventListener('click', () => {
     //gets the input from the radio button on the DOM and sets value to the userThrow
