@@ -47,10 +47,10 @@ shootButton.addEventListener('click', () => {
     if (result === 'loss'){
         gameResult.textContent = 'oh Noooo! You Loose...';
         numberOfLosses++;}
-        number_of_losses.textContent = numberOfLosses;
+    number_of_losses.textContent = numberOfLosses;
     if (result === 'tie'){
         numberOfTies++;}
-        gameResult.textContent = 'its a DRAW...';
+    gameResult.textContent = 'its a DRAW...';
     number_of_ties.textContent = numberOfTies;
     number_of_throws.textContent = numberOfThrows;
     console.log(numberOfWins, numberOfLosses,numberOfTies, numberOfThrows);
