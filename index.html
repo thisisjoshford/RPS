@@ -8,33 +8,52 @@
     <link rel="stylesheet" href="style.css">
     <title>=Rock, Paper, Scissors Game!</title>
 </head>
-<h1>ROSHAMBO!</h1>
-<h3>(rock...paper...scissors...)</h3>
-<p>Welcome to ROSHAMBO! aka Rock... paper.... scissors...</p>
-<h3>Instructions...</h3>
-<p>explain the game...</p> 
-<ul>
-    <li>Rock beats paper</li>
-    <li>Paper beats rock</li>
-    <li>Scissors cuts paper</li>
-</ul>
 
-<label>
-    <input type="radio" name="choice" value="rock" checked>Rock
-</label>
-
-<label>
-    <input type="radio" name="choice" value="paper">Paper
-</label>
-
-<label>
-    <input type="radio" name="choice" value="scissors">Scissors
-</label>
-
-<button id="shootButton">SHOOT!</button>
 <body>
+    <img src="https://d2xwpga9enqvqn.cloudfront.net/product_graphics/281/large/Roshambo.png?1557670783">
+    <h1>Welcome to ROSHAMBO! </h1>
+    <h2>aka Rock... paper.... scissors...
+        
+    </h2>
+    <h3>Instructions...</h3>
+    <p>choose rock, paper or scissors and then click on "SHOOT!"</p> 
+    <h3>RULES</h3>
+    <ul>
+        <li>Rock beats Scissors</li>
+        <li>Paper covers Rock</li>
+        <li>Scissors Cuts paper</li>
+    </ul>
+    <label>
+        <input type="radio" name="choice" value="rock" checked><img class="radio-image" src="./assets/rock.jpg">
+    </label>
+    <label>
+        <input type="radio" name="choice" value="paper"><img class="radio-image" src="./assets/paper.jpg">
+    </label>
+    <label>
+        <input type="radio" name="choice" value="scissors"><img class="radio-image" src="./assets/scissors.jpg">
+    </label><br>
+    
+    <button id="shootButton" value="PLAY">SHOOT!</button>
+    <audio id="audio" src="./assets/glitch-in-the-matrix.ogg" ></audio>
+    <div id='results'><br>
+        <span id="robotChoiceDisplay" class="hidden"> The robot chose: </span><span id="robotChoice"></span>
+        <p id="gameResult"></p>
+    </div>
+    <div>
+        Number Of Throws:<span id="numberOfThrows"> </span><br>
+        Number Of Wins:<span id="numberOfWins"> </span><br>
+        Number of Losses:<span id="numberOfLosses"> </span><br>
+        Number of Draws:<span id="numberOfTies"> </span><br>
+    </div>
 
-    <script type="module" src="app.js"></script>
-</body>
+<!-- <script>
+    function play(){
+         var audio = document.getElementById("audio");
+         audio.play();
+                   }
+</script> -->
+</body >
+<script type="module" src="app.js"></script>
+<script type="module" src="get-random-throw.js"></script>
 
 </html>
