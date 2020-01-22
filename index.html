@@ -10,18 +10,14 @@
 </head>
 
 <body>
-
-    <div>
-        <img src="./assets/mainPageGraphic.png">
-        <p id="instructions">choose rock, paper or scissors and then click on "SHOOT!"</p> 
-        <ul id="rules">
+        <img src="./assets/mainPageGraphic.png" class="box1">
+        <p id="instructions" class="box1">choose rock, paper or scissors and then click on "SHOOT!"</p> 
+        <ul id="rules" class="box1">
             <li>Rock beats Scissors</li>
             <li>Paper covers Rock</li>
             <li>Scissors Cuts paper</li>
         <ul>
-    </div>
-    <aside>
-        <div id="playerChoices">
+        <div id="playerChoices" class="box2">
             <label>
                 <input type="radio" name="choice" value="rock" checked><img class="radio-image" src="./assets/rock.jpg">
             </label>
@@ -32,14 +28,11 @@
                 <input type="radio" name="choice" value="scissors"><img class="radio-image" src="./assets/scissors.jpg">
             </label>
          </div>
-         
-        </aside>
-
-    <div id="results" class="hidden">
+        <div id="results" class="hidden">
         
         <p id="gameResult"></p>
 
-    </div>
+        </div>
     
      <button id="shootButton" value="PLAY">SHOOT!</button><br>
     
@@ -47,13 +40,12 @@
     
      <span id="robotChoiceDisplay" class="hidden"> The robot chose: </span><span id="robotChoice"></span>
 
-    <div id="totals">
-        Throws: <span id="numberOfThrows"></span><br>
-        Wins: <span id="numberOfWins"></span><br>
-        Losses: <span id="numberOfLosses"></span><br>
-        Draws: <span id="numberOfTies"></span><br>
-    </div>
-    
+        <div id="totals">
+            Throws: <span id="numberOfThrows"></span><br>
+            Wins: <span id="numberOfWins"></span><br>
+            Losses: <span id="numberOfLosses"></span><br>
+            Draws: <span id="numberOfTies"></span><br>
+        </div>
 </body >
 
 <script type="module" src="app.js"></script>
