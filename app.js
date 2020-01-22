@@ -11,6 +11,7 @@ const number_of_wins = document.getElementById('numberOfWins');
 const number_of_losses = document.getElementById('numberOfLosses');
 const audio = document.getElementById('audio');
 const number_of_ties = document.getElementById('numberOfTies');
+const resultBox = document.getElementById('results');
 //sets empty containers for number of throws, wins, and losses globaly, not in button function so button doesn't reset 
 let numberOfThrows = 0;
 let numberOfWins = 0;
@@ -41,21 +42,25 @@ shootButton.addEventListener('click', () => {
     result = checkResult(userThrow, robotThrow);
     //checks the result and updates the gameResult element on the DOM to display results to user
     if (result === 'win') {
-        gameResult.textContent = 'YESSSSSSS! You WON!!!';
+        gameResult.textContent = 'WIN!';
         numberOfWins++;
-        number_of_wins.textContent = numberOfWins;}
-    if (result === 'loss'){
-        gameResult.textContent = 'oh Noooo! You Loose...';
-        numberOfLosses++;}
-    number_of_losses.textContent = numberOfLosses;
-    if (result === 'tie'){
-        numberOfTies++;}
-    gameResult.textContent = 'its a DRAW...';
+        number_of_wins.textContent = numberOfWins;
+    }
+    if (result === 'loss') {
+        gameResult.textContent = 'LOSE';
+        numberOfLosses++;
+        number_of_losses.textContent = numberOfLosses;
+    }
+    if (result === 'tie') {
+        numberOfTies++;
+        gameResult.textContent = 'DRAW';}
+
     number_of_ties.textContent = numberOfTies;
     number_of_throws.textContent = numberOfThrows;
-    console.log(numberOfWins, numberOfLosses,numberOfTies, numberOfThrows);
+    console.log(numberOfWins, numberOfLosses, numberOfTies, numberOfThrows);
     //changes the robot throw results to uppercase
     robotChoice.textContent = robotThrow.toUpperCase();
     //removes the hidden class on click and displays "the robot's choice was" text
     robotChoiceDisplay.classList.remove('hidden');
+    resultBox.classList.remove('hidden');
 });

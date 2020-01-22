@@ -6,53 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>=Rock, Paper, Scissors Game!</title>
+    <title>Rock, Paper, Scissors Game!</title>
 </head>
 
 <body>
-    <img src="https://d2xwpga9enqvqn.cloudfront.net/product_graphics/281/large/Roshambo.png?1557670783">
-    <h1>Welcome to ROSHAMBO! </h1>
-    <h2>aka Rock... paper.... scissors...
-        
-    </h2>
-    <h3>Instructions...</h3>
-    <p>choose rock, paper or scissors and then click on "SHOOT!"</p> 
-    <h3>RULES</h3>
-    <ul>
-        <li>Rock beats Scissors</li>
-        <li>Paper covers Rock</li>
-        <li>Scissors Cuts paper</li>
-    </ul>
-    <label>
-        <input type="radio" name="choice" value="rock" checked><img class="radio-image" src="./assets/rock.jpg">
-    </label>
-    <label>
-        <input type="radio" name="choice" value="paper"><img class="radio-image" src="./assets/paper.jpg">
-    </label>
-    <label>
-        <input type="radio" name="choice" value="scissors"><img class="radio-image" src="./assets/scissors.jpg">
-    </label><br>
-    
-    <button id="shootButton" value="PLAY">SHOOT!</button>
-    <audio id="audio" src="./assets/shoot.wav"></audio>
-    <div id='results'><br>
-        <span id="robotChoiceDisplay" class="hidden"> The robot chose: </span><span id="robotChoice"></span>
-        <p id="gameResult"></p>
-    </div>
-    <div>
-        Number Of Throws:<span id="numberOfThrows"> </span><br>
-        Number Of Wins:<span id="numberOfWins"> </span><br>
-        Number of Losses:<span id="numberOfLosses"> </span><br>
-        Number of Draws:<span id="numberOfTies"> </span><br>
-    </div>
 
-<!-- <script>
-    function play(){
-         var audio = document.getElementById("audio");
-         audio.play();
-                   }
-</script> -->
+    <div>
+        <img src="./assets/mainPageGraphic.png">
+        <p id="instructions">choose rock, paper or scissors and then click on "SHOOT!"</p> 
+        <ul id="rules">
+            <li>Rock beats Scissors</li>
+            <li>Paper covers Rock</li>
+            <li>Scissors Cuts paper</li>
+        <ul>
+    </div>
+    <aside>
+        <div id="playerChoices">
+            <label>
+                <input type="radio" name="choice" value="rock" checked><img class="radio-image" src="./assets/rock.jpg">
+            </label>
+            <label>
+                <input type="radio" name="choice" value="paper"><img class="radio-image" src="./assets/paper.jpg">
+            </label>
+            <label>
+                <input type="radio" name="choice" value="scissors"><img class="radio-image" src="./assets/scissors.jpg">
+            </label>
+         </div>
+         
+        </aside>
+
+    <div id="results" class="hidden">
+        
+        <p id="gameResult"></p>
+
+    </div>
+    
+     <button id="shootButton" value="PLAY">SHOOT!</button><br>
+    
+     <audio id="audio" src="./assets/shoot.wav"></audio>
+    
+     <span id="robotChoiceDisplay" class="hidden"> The robot chose: </span><span id="robotChoice"></span>
+
+    <div id="totals">
+        Throws: <span id="numberOfThrows"></span><br>
+        Wins: <span id="numberOfWins"></span><br>
+        Losses: <span id="numberOfLosses"></span><br>
+        Draws: <span id="numberOfTies"></span><br>
+    </div>
+    
 </body >
+
 <script type="module" src="app.js"></script>
 <script type="module" src="get-random-throw.js"></script>
 

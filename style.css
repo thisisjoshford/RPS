@@ -4,12 +4,15 @@
   
 .radio-image {
   border: 10px solid transparent;
-  border-radius: 60%;
+  border-radius: 100%;
   width: 150px;
+  cursor: pointer;
 }
 
 input:checked + .radio-image {
     border: 20px solid rgb(0, 72, 131);
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
     
 }
 /*This removes the default radio button*/
@@ -19,16 +22,57 @@ input:checked + .radio-image {
   width: 0;
   height: 0;
 }
-button{
-  border-radius: 12px;
-  height: 40px;
-  width: 70px;
-  background-color:lightgreen;
- position: absolute;
- left: 200px;
-}
+
 body{
-  position: relative;
-  left: 300px;
   background-color: #fee8ad;
  }
+
+button {
+  color: #21004d !important;
+  text-transform: uppercase;
+  background: #fee8ad;
+  padding: 20px;
+  border: 4px solid #21004d !important;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  font-size: large;
+  }
+
+aside {
+  display: block;
+}
+
+button:hover {
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  }
+
+#results {
+  width:75px;
+  height:50px;
+  border-radius: 10px;
+  border: solid black 2px;
+  background-color: #ffffa8;
+  color:black;
+  padding: 20px;
+  font-size: x-large;
+  margin: auto;
+  box-shadow: 10px 10px 5px black;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  
+}
+
+.fixed {
+  position: fixed;
+  bottom: 30;
+  right: 30;
+  width: 50px;
+  background-color: white;
+}
